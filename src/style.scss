@@ -1,0 +1,394 @@
+$yellow:#7f7d77;
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		-o-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		-o-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+@mixin clip-path($clip) {
+	-webkit-clip-path: $clip;
+	-moz-clip-path: $clip;
+	-ms-clip-path: $clip;
+	clip-path: $clip;
+}
+
+@mixin transition($transition) {
+	-moz-transition:    all $transition ease;
+	-o-transition:      all $transition ease;
+	-webkit-transition: all $transition ease;
+	-ms-transition: 	all $transition ease;
+	transition:         all $transition ease;
+}
+
+.paddding {
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+
+
+
+// Header
+
+.navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.active {
+	color: #ffffff!important;
+	padding-top: 10px!important;
+	padding-bottom: 10px!important;
+	padding-left: 15px!important;
+	padding-right: 15px!important;
+	margin: 10px 10px!important;
+	@include transition(0.5s);
+	background: $yellow!important;
+	border-radius: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #ffffff!important;
+	padding-top: 10px!important;
+	padding-bottom: 10px!important;
+	padding-left: 15px!important;
+	padding-right: 15px!important;
+	margin: 10px 10px!important;
+	@include transition(0.5s);
+	position: relative!important;
+	border-radius: 10px;
+
+	&:focus, &:hover {
+		background: $yellow!important;
+		color: #ffffff!important;
+		padding-top: 10px!important;
+		padding-bottom: 10px!important;
+		padding-left: 15px!important;
+		padding-right: 15px!important;
+		margin: 10px 10px;
+		position: relative;
+		border-radius: 10px;
+	}
+}
+
+.bg-faded {
+    background-color: #000000;
+  }
+
+.mobile_logo_width {
+	display: none;
+}
+
+.navbar-nav {
+ flex-direction: row !important;
+ cursor: pointer;  
+}
+
+.navbar {
+	padding-top: 0px !important; 
+	background: #000000;
+   }
+   
+
+// form
+.heading {
+    font-size: 20px;
+	color: #424040;
+    font-weight: 600;
+}
+
+.input-text-box {
+    @include border-radius(0!important);
+	font-size: 15px!important;
+	height: 45px!important;
+	letter-spacing: 1px!important;  
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: $yellow !important;
+}
+
+.btn-sign-in {
+    background: #c43421!important;
+    @include border-radius(0!important);
+	color: #fff!important;
+	padding: 10px 50px!important;
+    border-radius: 5px !important;
+}
+
+.btn-sign-up {
+    background: #4287f5!important;
+    @include border-radius(0!important);
+	color: #fff!important;
+	padding: 10px 50px!important;
+    border-radius: 5px !important;
+}
+
+.blog-form input:focus {
+    border-color: $yellow !important;
+}
+
+.description-box {
+    @include border-radius(0!important);
+	height: 150px;
+	resize: none;
+	padding-top: 20px!important;
+	letter-spacing: 1px!important; 
+}
+
+.btn-add {
+    background: #bf7034 !important;
+	@include border-radius(0!important);
+	color: #fff!important;
+	padding: 10px 50px!important;
+}
+
+
+.react-tag-input {
+    height: 45px !important;
+}
+
+.react-tag-input:focus {
+    border-color: $yellow !important;   
+}
+
+.catg-dropdown {
+    width: 100%;
+    border-radius: 4px;
+    height: 45px;
+    color: #806a78;
+  }
+  
+  .catg-dropdown:focus {
+      outline: none !important;
+      border-color: $yellow;
+  }
+  
+  .trending {
+      float: left;
+      color: #806a78;
+      font-size: 18px;
+      margin: auto;
+  }
+
+//   Blog Section
+
+.blog-heading {
+	font-size: 24px;
+	color: #222;
+    border-bottom: 1px solid #777;
+	padding-top: 0px !important;
+}
+
+.blogs-img {
+    height: 300	px;
+	border-radius:"10px";
+	overflow: hidden;
+	position: relative;
+	top: 0;
+}
+
+.blogs-img > img {
+    height: 300px;
+	min-width: 70%;
+}
+
+.title {
+    font-size: 17px;
+	color: #222!important;
+	font-weight: 800;
+    font-family: "Poppins";
+    text-decoration: none;
+	display: block;
+}
+
+
+.category {
+    display: inline-block;
+    position: relative;
+    background-color: #4287f5;
+    padding: 4px 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: none;
+    line-height: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.fa-trash {
+	color: #c43421 !important;
+}
+
+.fa-edit {
+	color: lightsalmon !important;
+}
+
+.meta-info {
+    font-size: 15px;
+	color: #222;
+	display: block;
+    font-family: "Poppins";
+    text-decoration: none;
+}
+
+.blog-single-content .meta-info {
+	margin-top: 8px;
+	border-bottom: 1px solid #777;
+	margin-bottom: 15px;
+}
+
+.author {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 15px !important;	
+}
+
+.short-description {
+    font-size: 14px;
+	color: #777;
+}
+
+.btn-read {
+    background: #544e66 !important;
+	@include border-radius(0!important);
+	color: #fff!important;
+	padding: 5px 10px!important;
+	float: left;
+	margin-top: 10px;
+	font-size: 14px;
+	border-radius: 10px;
+}
+
+// Detail
+
+.blog-title-box {
+    width: 38.2%;
+	z-index: 555;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+    .single & {
+		position: relative;
+		height: 500px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+    .overlay {
+        position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		background: rgba(0,0,0,.4);
+		object-fit: cover;
+    }
+
+    .blog-title {
+        z-index: 12;
+		position: absolute;
+		bottom: 0;
+		padding: 30px;
+
+        .single & {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+        h2 {
+            color: white;
+			font-weight: 300;
+            .single & {
+				font-size: 72px;
+			}
+        }
+
+        > span {
+            display: block;
+			color: rgba(255,255,255,.5);
+			text-transform: uppercase;
+			font-size: 15px;
+			letter-spacing: .05em;
+			margin-bottom: 10px;
+        }
+    }
+    
+}
+
+.blog-single-content {
+    z-index: 999;
+	background: white;
+
+	p, ul li {
+		font-size: 1.05rem;
+	}
+}
+
+// Home
+.spinner {
+	width: 3rem;
+	height: 3rem;
+}
+
+// Pagination
+.btn_mange_pagging {
+	background: #dadada;
+	padding: 12px 20px;
+	color: #222!important;
+	font-weight: 800;
+	margin: 0 10px;
+	border-radius: 10px;
+	@include transition(0.5s);
+}
+
+.btn_mange_pagging:hover, .btn_mange_pagging:focus {
+	background: #222;
+	color: #fff!important;
+	font-weight: 800;
+}
+
+.btn_pagging {
+	background: #dadada!important;
+	color: #222;
+	padding: 12px 20px!important;
+	font-weight: 800;
+	margin: 0 10px;
+	@include transition(0.5s);
+}
+
+.btn_pagging:hover, .btn_pagging:focus {
+	background: #222!important;
+	color: #fff;
+}
+
+.scroll {
+	width: auto;
+	height: 230px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-align:justify;
+}
+
+// Jodit-editor
+
+.jodit-wysiwyg {
+	min-height: 400px !important;
+	text-align: left !important;
+  }
+  
